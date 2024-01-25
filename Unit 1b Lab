@@ -1,0 +1,31 @@
+using System;
+					
+public class program
+{
+	public void Main()
+	{
+		Console.WriteLine("Hello World");
+		TempCompare(26);
+		ExamGrader(91);
+	}
+    #If value is more than or equal to 30 the message to stay hydrated appears. If it is any other value lower than 30 the message have a pleasant day appears.
+	public void TempCompare (int value) {
+		if(value >= 30) {
+			Console.WriteLine("Stay hydrated and avoid staying in the sun for too long.");
+		} if (value < 30) {
+			Console.WriteLine("Have a pleasant day!");
+		}
+	}
+	#If the value is more than or equal to 90 the message will appear that you got an A and it changes for the other grades.
+	public void ExamGrader (int value) {
+		if (value>=90) {
+			Console.WriteLine("Your grade is an A");
+		} else if (value <= 89) {
+			Console.WriteLine("Your grade is a B");
+		} else if (value <= 79) {
+			Console.WriteLine("Your grade is a C");
+		} else if (value <= 60) {
+			Console.WriteLine("Your grade is an F");
+		}
+	}
+}
