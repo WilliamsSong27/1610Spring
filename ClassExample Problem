@@ -1,0 +1,26 @@
+using System;
+
+public class ClassExample
+{
+	
+}
+	
+public class ClassWithVariables
+{
+    
+	public int number = 5;
+    public string userName = "Bob";
+	public int Bobsalary = 50000;
+	public bool Yes = true;
+	
+}
+
+public class ClassWithFunctions
+{
+    public void RunFunction()
+    {
+        Console.WriteLine("Running Function");
+		Console.WriteLine("Bob");
+		Console.WriteLine("True");
+    }
+}   
