@@ -5,27 +5,55 @@ public class program
 	public void Main()
 	{
 		Console.WriteLine("Hello World");
-		TempCompare(26);
+		TempCompare(40);
 		ExamGrader(91);
 	}
-    #If value is more than or equal to 30 the message to stay hydrated appears. If it is any other value lower than 30 the message have a pleasant day appears.
+    
 	public void TempCompare (int value) {
-		if(value >= 30) {
-			Console.WriteLine("Stay hydrated and avoid staying in the sun for too long.");
-		} if (value < 30) {
-			Console.WriteLine("Have a pleasant day!");
-		}
+		if(value < 0) {
+			Console.WriteLine("It's freezing! Be sure to grab a coat if you're planning on going outside.");
+		} else if (value >= 0 && value < 10) {
+			Console.WriteLine("Brrrr, it's cold. Consider wearing a jacket if you're planning on going outside.");
+		} else if (value >= 10 && value < 20) {
+			Console.WriteLine("It's a bit cold outside, wear a light jacket and an umbrella.");
+		} else if (value >= 20 && value < 30) {  
+			Console.WriteLine("It's a nice weather, you might want to wear a light sweater.");
+		} else;
+			Console.WriteLine("It's warm outside, enjoy the weather!");
+		
 	}
-	#If the value is more than or equal to 90 the message will appear that you got an A and it changes for the other grades.
+	
 	public void ExamGrader (int value) {
 		if (value>=90) {
-			Console.WriteLine("Your grade is an A");
+			Console.WriteLine("Your exam score is A");
 		} else if (value <= 89) {
-			Console.WriteLine("Your grade is a B");
+			Console.WriteLine("Your exam score is B");
 		} else if (value <= 79) {
-			Console.WriteLine("Your grade is a C");
+			Console.WriteLine("Your exam score is C");
 		} else if (value <= 60) {
-			Console.WriteLine("Your grade is an F");
+			Console.WriteLine("Your exam score is F");
+		}	Console.WriteLine("Enter your favorite subject: ");
+			string FavoriteSubject = Console.ReadLine();
+			
+			switch (FavoriteSubject.ToLower())
+			{
+				case "math":
+					Console.WriteLine("Great! Keep practicing and exploring mathematical concepts.");
+					break;
+				case "science":
+					Console.WriteLine("Awesome! Stay curious and keep discovering the wonders of science.");
+					break;
+				case "english":
+                	Console.WriteLine("Fantastic! Keep reading and expressing yourself through your writing!");
+                	break;
+            	case "history":
+                	Console.WriteLine("Cool! Explore the history and learn from the past!");
+                	break;
+				default:
+					Console.WriteLine("Nice, Every subject is unique and valuable. Keep learning and enjoy the process!");
+					break;
 		}
 	}
 }
+	
+	
